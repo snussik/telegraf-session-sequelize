@@ -17,7 +17,7 @@ $ yarn add telegraf-session-sequelize
 ```js
 import { Telegraf } from 'telegraf'
 import { Sequelize } from 'sequelize'
-import { session } from 'telegraf-session-sequelize-pg'
+import { session } from 'telegraf-session-sequelize'
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
