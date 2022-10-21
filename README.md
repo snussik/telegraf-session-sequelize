@@ -27,7 +27,10 @@ const init = async () => {
 	    dialect: 'postgres'
     })
 	
-    bot.use(session(sequelize, { collectionName: 'Sessions' }))
+    const seqSession = await session(sequelize, { collectionName: 'Sessions' });
+    sequelize.sync({force:true});
+    bot.use(seqSession);
+    
     bot.launch()
 }
 
